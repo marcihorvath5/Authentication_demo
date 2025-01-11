@@ -9,5 +9,6 @@ namespace authDemo.Services
         Task<(string AccessToken, string RefreshToken)> LoginAsync(LoginModel model);
         Task<IdentityResult> DeleteAsync(string email);
         Task<IdentityResult> ChangePasswordAsync(string userId, PasswordModel model);
+        Task<bool> SaveFile(FileModel model); 
     }
 }

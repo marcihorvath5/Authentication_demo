@@ -10,15 +10,16 @@ namespace authDemo.Services
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ITokenService _tokenService;
-       
+        private readonly UserDb _userDb;
 
         public UserService(RoleManager<IdentityRole> roleManager, UserManager<User> userManager, 
-                            SignInManager<User> signInManager, ITokenService tokenService)
+                            SignInManager<User> signInManager, ITokenService tokenService, UserDb db)
         {
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
+            _userDb = db;
         }
 
 
@@ -113,6 +114,13 @@ namespace authDemo.Services
             IdentityResult result =  await _userManager.ChangePasswordAsync(user,model.OldPassword, model.NewPassword);
 
             return result;
+        }
+
+        public async Task<bool> SaveFile(FileModel model)
+        {
+            await _userDb.Files.AddAsync(model);
+            await _userDb.SaveChangesAsync();
+            return true;
         }
     }
 }

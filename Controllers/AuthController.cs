@@ -110,5 +110,24 @@ namespace authDemo.Controllers
                 return Unauthorized(new { message = ex.Message });
             }
         }
+
+        [HttpPost("addfile")]
+        public async Task<IActionResult> AddFile(IFormFile model)
+        {
+            FileModel file = new FileModel
+            {
+                Name = model.FileName
+
+            };
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                await model.CopyToAsync(ms);
+                file.FileData = ms.ToArray();
+            }
+
+            await _userService.SaveFile(file);
+            return Ok(file);
+        }
     }
 }

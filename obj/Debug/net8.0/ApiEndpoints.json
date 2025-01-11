@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "authDemo.Controllers.AuthController",
+    "Method": "AddFile",
+    "RelativePath": "api/Auth/addfile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "authDemo.Controllers.AuthController",
     "Method": "ChangePassword",
     "RelativePath": "api/Auth/change-password",
     "HttpMethod": "POST",

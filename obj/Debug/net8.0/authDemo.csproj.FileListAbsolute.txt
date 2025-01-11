@@ -251,4 +251,5 @@ C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\refint\auth
 C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\authDemo.pdb
 C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\authDemo.genruntimeconfig.cache
 C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\ref\authDemo.dll
+C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\authDemo.sourcelink.json
 C:\Users\sugar\Desktop\projects\Authentication_demo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

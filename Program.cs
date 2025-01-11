@@ -105,12 +105,16 @@ async Task CreateRoles(RoleManager<IdentityRole> roleManager)
     }
 }
 
-    // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+
 }
+else
+    app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 
